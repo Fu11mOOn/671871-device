@@ -5,11 +5,8 @@
     <title>Каталог товаров</title>
   </head>
   <body>
-
-<!-- Шапка сайта -->
-
     <header class="main-header">
-      <a href="#"><span class="header-logo">Device</span></a>
+      <a href="index.html"><span class="header-logo">Device</span></a>
       <!-- форма Поиск по сайту  -->
       <nav class="main-navigation">
         <ul class="user-navigation">
@@ -19,7 +16,7 @@
           <li><a href="#">Корзина</a></li>
         </ul>
         <ul class="site-navigation">
-          <li><button class="hidden-catalog-menu" type="button" name="button"></button></li>
+          <li><button class="catalog-menu-button" type="button" name="button">Каталог товаров</button></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
@@ -27,104 +24,87 @@
       </nav>
     </header>
     <main class="container">
-
-<!-- Сам каталог с товарами -->
-
-      <h1>Каталог товаров</h1>
-      <section class="selfie">
-        <h2>Моноподы для селфи</h2>
-        <div class="selfi-navigation">
-          <ul class="catalog-navigation">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Каталог товаров</a></li>
-            <li>Моноподы для селфи</li>
-          </ul>
-        </div>
-        <section class="sorting">
-          <h3>Сортировка:</h3>
-          <ul>
-            <li><button type="button" name="button">По цене</button></li>
-            <li><button type="button" name="button">По типу</button></li>
-            <li><button type="button" name="button">По популярности</button></li>
-          </ul>
-          <ul>
-            <li><button type="button" name="button">"Вверх"</button></li>
-            <li><button type="button" name="button">"Вниз"</button></li>
-          </ul>
-        </section>
-        <section class="filter">
-          <h3>Фильтр:</h3>
-          <!-- Формы для фильтра -->
-          <button type="button" name="button">Показать</button>
-        </section>
-<!-- Выбор гаджета -->
-        <section class="gadget-select">
-          <h3 class="visually-hidden">Выбор гаджета</h3>
-          <ul class="gadgaet-list">
-            <li class="list1">
-              <ul>
-                <li>
-                  <section class="gadget-item1">
-                    <button class="item-batton" type="button" name="button"><img src="#" alt="Любительская селфи-палка"></button>
-                    <a href="#"><h4>Любительская селфи-палка</h4></a>
-                    <p>500 руб.</p>
-                    <div class="selection-menu">
-                      <button class="basket-button" type="button" name="button">В корзину</button>
-                      <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
-                    </div>
-                  </section>
-                </li>
-                <li>
-                  <section class="gadget-item2">
-                    <button class="item-batton" type="button" name="button"><img src="#" alt="Профессиональная селфи-палка"></button>
-                    <a href="#"><h4>Профессиональная селфи-палка</h4></a>
-                    <p>1500 руб.</p>
-                    <div class="selection-menu">
-                      <button class="basket-button" type="button" name="button">В корзину</button>
-                      <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
-                    </div>
-                  </section>
-                </li>
-                <li>
-                  <section class="gadget-item3">
-                    <button class="item-batton" type="button" name="button"><img src="#" alt="Непотопляемая селфи-палка"></button>
-                    <a href="#"><h4>Непотопляемая селфи-палка</h4></a>
-                    <p>2500 руб.</p>
-                    <div class="selection-menu">
-                      <button class="basket-button" type="button" name="button">В корзину</button>
-                      <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
-                    </div>
-                  </section>
-                </li>
-                <li>
-                  <section class="gadget-item4">
-                    <button class="item-batton" type="button" name="button"><img src="#" alt="Селфи-палка Следуй за мной"></button>
-                    <a href="#"><h4>Селфи-палка <span class="quotes">Следуй за мной</span></h4></a>
-                    <p>4900 руб.</p>
-                    <div class="selection-menu">
-                      <button class="basket-button" type="button" name="button">В корзину</button>
-                      <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
-                    </div>
-                  </section>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <nav class="gadget-navigation">
-            <button class="back-button" type="button" name="button">Назад</button>
-            <ul class="gadgaet-list-navigation">
-              <li><button type="button" name="button">1</button></li>
-              <li><button type="button" name="button">2</button></li>
-              <li><button type="button" name="button">3</button></li>
-            </ul>
-            <button class="forward-button" type="button" name="button">Вперед</button>
-          </nav>
-        </section>
+      <h1>Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li class="breadcrumbs-current">Моноподы для селфи</li>
+      </ul>
+      <section class="sorting">
+        <h2>Сортировка:</h2>
+        <ul>
+          <li><button type="button" name="button">По цене</button></li>
+          <li><button type="button" name="button">По типу</button></li>
+          <li><button type="button" name="button">По популярности</button></li>
+        </ul>
+        <ul>
+          <li><button type="button" name="button">"Вверх"</button></li>
+          <li><button type="button" name="button">"Вниз"</button></li>
+        </ul>
+      </section>
+      <section class="filter">
+        <h2>Фильтр:</h2>
+        <!-- Формы для фильтра -->
+        <button type="button" name="button">Показать</button>
+      </section>
+<!-- Список гаджетов -->
+      <section class="gadget-select">
+        <h2 class="visually-hidden">Список гаджета</h2>
+        <ul class="gadgaet-list">
+          <li>
+            <section class="gadget-item">
+              <button class="item-batton" type="button" name="button"><img src="#" alt="Любительская селфи-палка"></button>
+              <a href="#"><h4>Любительская селфи-палка</h4></a>
+              <p>500 руб.</p>
+              <div class="selection-menu">
+                <button class="basket-button" type="button" name="button">В корзину</button>
+                <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
+              </div>
+            </section>
+          </li>
+          <li>
+            <section class="gadget-item">
+              <button class="item-batton" type="button" name="button"><img src="#" alt="Профессиональная селфи-палка"></button>
+              <a href="#"><h4>Профессиональная селфи-палка</h4></a>
+              <p>1500 руб.</p>
+              <div class="selection-menu">
+                <button class="basket-button" type="button" name="button">В корзину</button>
+                <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
+              </div>
+            </section>
+          </li>
+          <li>
+            <section class="gadget-item">
+              <button class="item-batton" type="button" name="button"><img src="#" alt="Непотопляемая селфи-палка"></button>
+              <a href="#"><h4>Непотопляемая селфи-палка</h4></a>
+              <p>2500 руб.</p>
+              <div class="selection-menu">
+                <button class="basket-button" type="button" name="button">В корзину</button>
+                <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
+              </div>
+            </section>
+          </li>
+          <li>
+            <section class="gadget-item">
+              <button class="item-batton" type="button" name="button"><img src="#" alt="Селфи-палка Следуй за мной"></button>
+              <a href="#"><h4>Селфи-палка <span class="quotes">Следуй за мной</span></h4></a>
+              <p>4900 руб.</p>
+              <div class="selection-menu">
+                <button class="basket-button" type="button" name="button">В корзину</button>
+                <button class="compare-button" type="button" name="button">Добавить к сравнению</button>
+              </div>
+            </section>
+          </li>
+        </ul>
+        <ul class="pagination-list">
+          <li><a class="pagination-item back-button" href="#">Назад</a></li>
+          <li><a class="pagination-item forward-button" href="#">Вперед</a></li>
+          <li><a class="pagination-item pagination-item-current" href="#">1</a></li>
+          <li><a class="pagination-item" href="#">2</a></li>
+          <li><a class="pagination-item" href="#">3</a></li>
+        </ul>
       </section>
     </main>
-
-<!-- Подвал сайта -->
-
     <footer class="main-footer">
       <span class="footer-logo">Device</span>
       <p class="address">г. Москва, ул. Строителей, 15</p>
@@ -155,18 +135,16 @@
 
 <!-- Скрытое меню с каталогом товаров -->
 
-    <section class="hidden-catalog-navigation">
+    <section class="hidden-catalog-menu">
       <h2 class="visually-hidden">Меню каталога товаров</h2>
-      <nav class="catalog-menu-navigation">
-        <ul>
-          <li><a href="#">Виртуальная реальность</a></li>
-          <li><a href="#">Фитнес браслеты</a></li>
-          <li><a href="#">Квадрокоптеры</a></li>
-          <li><a href="#">Моноподы для селфи</a></li>
-          <li><a href="#">Умные часы</a></li>
-          <li><a href="#">Экшн-камеры</a></li>
-        </ul>
-      </nav>
+      <ul class="catalog-menu-navigation">
+        <li><a href="#">Виртуальная реальность</a></li>
+        <li><a href="#">Фитнес браслеты</a></li>
+        <li><a href="#">Квадрокоптеры</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="#">Умные часы</a></li>
+        <li><a href="#">Экшн-камеры</a></li>
+      </ul>
     </section>
   </body>
 </html>
