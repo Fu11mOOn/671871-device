@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head lang="ru">
+<html lang="ru">
+  <head>
     <meta charset="utf-8">
     <title>Каталог товаров</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <!-- форма Поиск по сайту  -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend class="visually-hidden">Поиск</legend>
+            <label for="search">Поиск</label>
+            <input id="search" type="search" name="search" placeholder="Поиск по сайту" autocomplete>
+          </fieldset>
+        </form>
         <a href="index.html">
           <p class="header-logo">Device</p>
         </a>
@@ -67,15 +73,43 @@
           <a href="index.html">Главная</a>
         </li>
         <li>
-          <a href="catalog.html">Каталог товаров</a>
+          <a href="#">Каталог товаров</a>
         </li>
         <li>Моноподы для селфи</li>
       </ul>
-      <section class="filter">
-        <h2>Фильтр:</h2>
-        <!-- Формы для фильтра -->
-        <button type="button" name="button">Показать</button>
-      </section>
+      <div class="filter">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="filter-form">
+            <legend>Фильтр:</legend>
+            <div class="price">
+              <label for="price">Стоимость</label>
+              <!-- Как сделать 2 ползунка?) -->
+              <input id="price" type="range" name="price" value="5000" step="100" max="8000">
+            </div>
+            <div class="product-color">
+              <p>Цвет</p>
+              <input id="black-color" type="checkbox" name="black-color" checked>
+              <label for="black-color">Черный</label>
+              <input id="white-color" type="checkbox" name="white-color">
+              <label for="white-color">Белый</label>
+              <input id="blue-color" type="checkbox" name="blue-color" checked>
+              <label for="blue-color">Синий</label>
+              <input id="red-color" type="checkbox" name="red-color" checked>
+              <label for="red-color">Красный</label>
+              <input id="pink-color" type="checkbox" name="pink-color">
+              <label for="pink-color">Розовый</label>
+            </div>
+            <div class="bluetooth">
+              <p>Bluetooth</p>
+              <input id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+              <label for="bluetooth-yes">Есть</label>
+              <input id="bluetooth-no" type="radio" name="bluetooth" value="no">
+              <label for="bluetooth-no">Нет</label>
+            </div>
+            <button class="button">Показать</button>
+          </fieldset>
+        </form>
+      </div>
       <section class="selection-box">
         <h2 class="visually-hidden">Окно выбора товара</h2>
         <section class="sorting">
