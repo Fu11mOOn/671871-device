@@ -1,0 +1,544 @@
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src:
+    local("Gilroyextrabold"),
+    url("fonts/gilroyextrabold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: "Gilroy Light";
+  src:
+    local("Gilroylight"),
+    url("fonts/gilroylight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: #464646;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  color: #000000;
+  text-transform: uppercase;
+}
+/* Ничего что так глобально ссылки оформил? */
+a:hover:not(.button) {
+  color: rgba(0, 0, 0, 0.6);
+}
+a:active:not(.button) {
+  color: rgba(0, 0, 0, 0.3);
+}
+.button {
+  width: 160px;
+  height: 40px;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  padding: 12px auto;
+  border: 0;
+  background-color: #f0c52e;
+  background-size: 220px 8px;
+}
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.title {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 48px;
+  color: #000000;
+}
+.visually-hidden{
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* Шапка */
+.main-header {
+  margin: 0;
+  padding: 0;
+  background-color: #f7e296;
+}
+.header-logo,
+.footer-logo {
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.15px;
+}
+/* Поиск */
+.search {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-bottom: 2px solid #000000;
+}
+/* Картинка почему то не вставляется в label */
+.search label{
+  background-image: url("img/serch.svg");
+}
+.search input {
+  border-width: 0;
+  background-color: transparent;
+  opacity: 0.3;
+}
+.search input:focus {
+  opacity: 1;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+/* Как сделать, чтобы кнопка была все время скрыта, но открывалась, если будет активен поиск? */
+.search button {
+  border-width: 2px;
+  border-color: #000000;
+  background-color: transparent;
+}
+.search button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.search button:active {
+  color: rgba(255,255,255,0.3);
+}
+/* Пользовательская навигация */
+/* Можно ли тут заменить просто body ul? */
+.user-navigation,
+.site-navigation,
+.site-navigation-list {
+  list-style: none;
+}
+.user-navigation-item a,
+.site-navigation-list a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  text-transform: none;
+}
+/* Как спрятать мининавигацию и сделать, чтобы она показывалась только при наведении на "Каталог товаров"? */
+.site-navigation-list{
+}
+.site-navigation-list a {
+  line-height: 30px;
+}
+/* Слайды */
+.slide .title {
+  line-height: 56px;
+}
+/* Почему кнопка не хочет изменять свои размеры ни в какую? Дело в сетке?(я пока что сетку и блочную модель еще не смотрел подробнее) */
+.slide .button {
+  width: 220px;
+}
+.characteristics {
+  border-collapse: collapse;
+}
+.characteristics .table-row:first-child {
+  font-family: "Gilroy Light", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 48px;
+}
+.characteristics .table-row:nth-child(2) {
+  font-size: 13px;
+  line-height: 20px;
+}
+.table-row td:nth-child(2) {
+  padding: 0 80px;
+}
+.table-row:first-child td {
+  padding-bottom: 5px;
+}
+/* Каталог товаров */
+.catalog-list {
+  list-style: none;
+  font-size: 18px;
+}
+.catalog-item {
+}
+.catalog-item a {
+  display: flex;
+  width: 160px;
+  height: 240px;
+  display: flex;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  background-color: #f7e296;
+}
+.catalog-item a:hover {
+  color: #000000;
+  background-color: #f0c52e;
+}
+.catalog-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f0c52e;
+}
+/* Я не понимаю, почему не показывает картинки? Вообще никак =( */
+.catalog-item a:first-child {
+  background-image: url("img/popular-1.svg");
+  background-size: 97px 55px;
+}
+.catalog-item a:nth-child(2) {
+  background-image: url("img/popular-2.svg");
+  background-size: 86px 117px;
+}
+.catalog-item a:nth-child(3) {
+  background-image: url("img/popular-3.svg");
+  background-size: 71px 87px;
+}
+.catalog-item a:nth-child(4) {
+  background-image: url("img/popular-4.svg");
+  background-size: 107px 65px;
+}
+.catalog-item a:nth-child(5) {
+  background-image: url("img/popular-5.svg");
+  background-size: 56px 98px;
+}
+.catalog-item a:last-child {
+  background-image: url("img/popular-6.svg");
+  background-size: 132px 69px;
+}
+/* Сервис-слайды */
+.service-slide {
+  background-color: #e5e5e5;
+}
+.service-slide .button {
+  background-size: 160px 8px;
+}
+.service-slide .button:hover {
+  background-size: 160px 40px;
+}
+.service-slide .button:active {
+  width: 278px;
+  border-right: 118px solid #000000;
+  color: #f7e184;
+  background-color: #000000;
+}
+/* Логотипы */
+.logotypes-list {
+  list-style: none;
+}
+.dji a:hover {
+  background-image: url("img/logo-1.png");
+}
+.spg a:hover {
+  background-image: url("img/logo-2.png");
+}
+.gp a:hover {
+  background-image: url("img/logo-3.png");
+}
+.vive a:hover {
+  background-image: url("img/logo-4.png");
+}
+/* Описание компании */
+.description-company p {
+  letter-spacing: normal;
+}
+.description-company .button {
+  width: 260px;
+}
+.company-list{
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: normal;
+  color: #000000;
+}
+/* Подвал */
+.main-footer {
+  background-color: #464646;
+  color: #ffffff;
+}
+.main-footer a {
+  color: inherit;
+}
+.main-footer ul {
+  list-style: none;
+}
+.footer-top .footer-logo {
+  color: #ffc600;
+}
+.footer-top .footer-logo:hover {
+  color: rgba(255, 198, 0, 0.6);
+}
+.footer-top .footer-logo:active {
+  color: rgba(255, 198, 0, 0.3);
+}
+.footer-user-navigation a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-user-navigation a:hover {
+  color: #ffffff;
+}
+.footer-user-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-site-navigation a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-site-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.address,
+.phone {
+  letter-spacing: normal;
+}
+.footer-social-item a {
+  opacity: 0.3;
+}
+.footer-social-item a:hover {
+  opacity: 0.6;
+}
+.footer-social-item a:active {
+  opacity: 0.1;
+}
+.footer-bottom a:hover {
+  opacity: 0.6;
+}
+.footer-tootom a:active {
+  opacity: 0.3;
+}
+/* Окно "Написать нам" */
+.close-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.close-button:hover {
+  opacity: 1.0;
+}
+.close-button:active {
+  opacity: 0.3;
+}
+.letter label {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+.letter .field {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+  border: 0;
+  background-color: rgba(230, 230, 230, 0.5);
+  color: rgba(70, 70, 70, 0.4);
+}
+.letter .field:hover {
+  background-color: rgba(230, 230, 230, 0.8);
+  color: rgba(70, 70, 70, 0.4);
+}
+.letter .field:focus {
+  border: 3px solid #f7e296;
+  background-color: #ffffff;
+  color: #000000;
+}
+/* Задал всем полям required и после добавления псевдокласса invalid, они окрасились. Убрал reauired и стало нормально. Как сделать, чтобы required оставался и поля не окрашивались? */
+.letter .field:invalid {
+  color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(237, 181, 181, 0.5);
+}
+.send-button {
+  width: 200px;
+}
+/* Внутрення страница */
+/* breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+}
+.breadcrumbs-item,
+.breadcrumbs-item a{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: none ;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.3)
+}
+.breadcrumbs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+/* Фильтр */
+.filter {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.filter>p {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  background-color: #dbdbdb;
+}
+.filter ul {
+  list-style: none;
+}
+.filter-form {
+  background-color: #ebebeb;
+}
+.filter-form fieldset {
+  border: 0;
+}
+.form-list {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 40px;
+}
+/* Как сделать нестандартные чекбоксы и радио? */
+.form-item input:hover {
+
+}
+.form-item input:active {
+
+}
+.form-item input:disabled {
+
+}
+.form-item input:checked {
+
+}
+.form-item input:checked:hover {
+
+}
+.form-item input:checked:active {
+
+}
+.form-item input:checked:disabled {
+
+}
+.filter-form .button {
+  width: 200px;
+}
+.sorting p {
+  letter-spacing: 3.6px;
+}
+.sorting-item a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.3);
+}
+.sorting-item:first-child a,
+.sorting-item:last-child a {
+  color: #000000;
+}
+.sorting-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.sorting-item a:active {
+  color: #000000;
+}
+.product-item a {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  text-transform: none;
+}
+.product-item p {
+  font-family: "Gilroy Light", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+.compare-button {
+  border: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+}
+.compare-button:hover {
+  color: #000000;
+}
+.compare-button:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+.pagination-list {
+  background-color: #ebebeb;
+}
+.pagination-item a {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+.pagination-item:nth-child(3) a,
+.pagination-item:nth-child(4) a {
+  color: rgba(0, 0, 0, 0.3);
+}
+.pagination-item:nth-child(3) a:hover,
+.pagination-item:nth-child(4) a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.pagination-item:nth-child(3) a:active,
+.pagination-item:nth-child(4) a:active {
+  color: rgba(0, 0, 0, 1.0);
+}
+.pagination-item:first-child a:hover {
+  background-color: #d9d9d9;
+  color: #000000;
+}
+.pagination-item:last-child a:hover {
+  background-color: #d9d9d9;
+  color: #000000;
+}
+.pagination-item:first-child a:active {
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
+}
+.pagination-item:last-child a:active {
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
+}

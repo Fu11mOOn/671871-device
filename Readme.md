@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Иван Жуков](https://up.htmlacademy.ru/htmlcss/20/user/671871).
-* Наставник: [Максим Нестеренко](https://up.htmlacademy.ru/htmlcss/20/user/48647).
+* Наставник: [Дмитрий Мальнёв](https://up.htmlacademy.ru/htmlcss/20/user/86681).
 
 ---
 
