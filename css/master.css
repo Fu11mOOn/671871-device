@@ -2,19 +2,17 @@
   font-family: "Gilroy ExtraBold";
   src:
     local("Gilroyextrabold"),
-    url("fonts/gilroyextrabold.woff2") format("woff2");
+    url("../fonts/gilroyextrabold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-
 }
 @font-face {
   font-family: "Gilroy Light";
   src:
     local("Gilroylight"),
-    url("fonts/gilroylight.woff2") format("woff2");
+    url("../fonts/gilroylight.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-
 }
 body {
   margin: 0;
@@ -98,7 +96,10 @@ a:active:not(.button) {
 }
 /* Картинка почему то не вставляется в label */
 .search label{
-  background-image: url("img/serch.svg");
+  color: transparent;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 .search input {
   border-width: 0;
@@ -139,11 +140,31 @@ a:active:not(.button) {
   letter-spacing: 0.15px;
   text-transform: none;
 }
+.user-navigation-item:first-child a {
+  background-image: url("../img/user.svg");
+  background-size: 13px 12px;
+  background-repeat: no-repeat;
+}
+.user-navigation-item:nth-child(3) a {
+  background-image: url("../img/compare.svg");
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+}
+.user-navigation-item:last-child a {
+  background-image: url("../img/cart.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
 /* Как спрятать мининавигацию и сделать, чтобы она показывалась только при наведении на "Каталог товаров"? */
 .site-navigation-list{
 }
 .site-navigation-list a {
   line-height: 30px;
+}
+.site-navigation-item:first-child>a {
+  background-image: url("../img/plus.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
 }
 /* Слайды */
 .slide .title {
@@ -178,16 +199,16 @@ a:active:not(.button) {
   list-style: none;
   font-size: 18px;
 }
-.catalog-item {
-}
+/* Короче, пока не знаю, как сделать тут, чтобы было как на макете) */
 .catalog-item a {
-  display: flex;
   width: 160px;
   height: 240px;
   display: flex;
   letter-spacing: 0.15px;
   text-transform: none;
+  vertical-align: bottom;
   background-color: #f7e296;
+  background-size: 160px 16px;
 }
 .catalog-item a:hover {
   color: #000000;
@@ -197,34 +218,64 @@ a:active:not(.button) {
   color: rgba(0, 0, 0, 0.3);
   background-color: #f0c52e;
 }
-/* Я не понимаю, почему не показывает картинки? Вообще никак =( */
-.catalog-item a:first-child {
-  background-image: url("img/popular-1.svg");
+.catalog-item:first-child a {
+  background-image: url("../img/popular-1.svg");
   background-size: 97px 55px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
-.catalog-item a:nth-child(2) {
-  background-image: url("img/popular-2.svg");
+.catalog-item:nth-child(2) a {
+  background-image: url("../img/popular-2.svg");
   background-size: 86px 117px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
-.catalog-item a:nth-child(3) {
-  background-image: url("img/popular-3.svg");
+.catalog-item:nth-child(3) a {
+  background-image: url("../img/popular-3.svg");
   background-size: 71px 87px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
-.catalog-item a:nth-child(4) {
-  background-image: url("img/popular-4.svg");
+.catalog-item:nth-child(4) a {
+  background-image: url("../img/popular-4.svg");
   background-size: 107px 65px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
-.catalog-item a:nth-child(5) {
-  background-image: url("img/popular-5.svg");
+.catalog-item:nth-child(5) a {
+  background-image: url("../img/popular-5.svg");
   background-size: 56px 98px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
-.catalog-item a:last-child {
-  background-image: url("img/popular-6.svg");
+.catalog-item:last-child a {
+  background-image: url("../img/popular-6.svg");
   background-size: 132px 69px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 /* Сервис-слайды */
 .service-slide {
+  display: flex;
   background-color: #e5e5e5;
+}
+.service-slide:first-of-type .service-description {
+  background-image: url("../img/delivery-slide.svg");
+  background-size: 136px 164px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.service-slide:nth-of-type(2) .service-description {
+  background-image: url("../img/warranty-slide.svg");
+  background-size: 171px 195px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.service-slide:last-of-type .service-description {
+  background-image: url("../img/credit-slide.svg");
+  background-size: 156px 188px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 .service-slide .button {
   background-size: 160px 8px;
@@ -240,19 +291,32 @@ a:active:not(.button) {
 }
 /* Логотипы */
 .logotypes-list {
+  display: flex;
   list-style: none;
 }
 .dji a:hover {
-  background-image: url("img/logo-1.png");
+  display: flex;
+  background-image: url("../img/logo-1.png");
+  background-size: 127px 73px;
+  background-repeat: no-repeat;
 }
 .spg a:hover {
-  background-image: url("img/logo-2.png");
+  display: flex;
+  background-image: url("../img/logo-2.png");
+  background-size: 260x 48px;
+  background-repeat: no-repeat;
 }
 .gp a:hover {
-  background-image: url("img/logo-3.png");
+  display: flex;
+  background-image: url("../img/logo-3.png");
+  background-size: 184px 48px;
+  background-repeat: no-repeat;
 }
 .vive a:hover {
-  background-image: url("img/logo-4.png");
+  display: flex;
+  background-image: url("../img/logo-4.png");
+  background-size: 200px 56px;
+  background-repeat: no-repeat;
 }
 /* Описание компании */
 .description-company p {
@@ -289,6 +353,7 @@ a:active:not(.button) {
 .footer-top .footer-logo:active {
   color: rgba(255, 198, 0, 0.3);
 }
+/* Пока что не знаю, как сделать иконки с хедера здесь желтыми */
 .footer-user-navigation a {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
@@ -322,6 +387,26 @@ a:active:not(.button) {
 }
 .footer-social-item a:active {
   opacity: 0.1;
+}
+.footer-social-item:first-child a {
+  background-image: url("../img/facebook.svg");
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+}
+.footer-social-item:nth-child(2) a {
+  background-image: url("../img/twitter.svg");
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+}
+.footer-social-item:last-child a {
+  background-image: url("../img/instagram.svg");
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+}
+.footer-bottom>a {
+  background-image: url("../img/logo-html.svg");
+  background-size: 27px 34px;
+  background-repeat: no-repeat;
 }
 .footer-bottom a:hover {
   opacity: 0.6;
@@ -390,6 +475,12 @@ a:active:not(.button) {
   line-height: 24px;
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.3)
+}
+.breadcrumbs-item:first-child a,
+.breadcrumbs-item:nth-child(2) a{
+  background-image: url("../img/nav-arrow.svg");
+  background-size: 4px 7px;
+  background-repeat: no-repeat;
 }
 .breadcrumbs a:hover {
   color: rgba(0, 0, 0, 0.6);
