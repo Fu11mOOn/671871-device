@@ -25,6 +25,12 @@ body {
   color: #464646;
   background-color: #ffffff;
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  outline: 1px solid;
+}
 a {
   text-decoration: none;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
@@ -59,11 +65,14 @@ a:active:not(.button) {
   color: rgba(0, 0, 0, 0.3);
 }
 .title {
+  margin: 0;
+  padding: 0;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 48px;
   color: #000000;
+  letter-spacing: 0.47px;
 }
 .visually-hidden{
   position: absolute;
@@ -77,44 +86,57 @@ a:active:not(.button) {
 }
 /* Шапка */
 .main-header {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  min-height: 300px;
+  /* margin: 40px auto; */
+}
+.main-navigation {
   background-color: #f7e296;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 60px;
+  justify-content: space-between;
 }
 .header-logo,
 .footer-logo {
   font-size: 48px;
   line-height: 48px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.48px;
+  /* outline: 1px solid; */
+  flex-basis: 1160px;
 }
 /* Поиск */
 .search {
-  margin: 0;
-  padding: 0;
-  border-width: 0;
+  display: flex;
+  width: 440px;
   border-bottom: 2px solid #000000;
+  /* outline: 1px solid; */
 }
-/* Картинка почему то не вставляется в label */
 .search label{
   color: transparent;
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
-  background-position: top center;
+  margin-top: auto;
+  margin-left: 3px;
+  /* margin-right: 10px; */
 }
 .search input {
+  flex-basis: auto;
   border-width: 0;
   background-color: transparent;
   opacity: 0.3;
 }
 .search input:focus {
-  opacity: 1;
-  border-bottom-width: 2px;
-  border-bottom-color: #000000;
+  opacity: 1.0;
 }
 /* Как сделать, чтобы кнопка была все время скрыта, но открывалась, если будет активен поиск? */
 .search button {
+  width: 85px;
+  height: 49px;
   border-width: 2px;
+  border-bottom: 0;
   border-color: #000000;
+  margin-left:auto;
   background-color: transparent;
 }
 .search button:hover {
@@ -128,11 +150,20 @@ a:active:not(.button) {
 /* Можно ли тут заменить просто body ul? */
 .user-navigation,
 .site-navigation,
-.site-navigation-list {
+.catalog-navigation {
+  padding: 0;
+  margin: 0;
   list-style: none;
+  outline: 1px solid;
+}
+.user-navigation {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .user-navigation-item a,
-.site-navigation-list a {
+.catalog-navigation a {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -156,21 +187,85 @@ a:active:not(.button) {
   background-repeat: no-repeat;
 }
 /* Как спрятать мининавигацию и сделать, чтобы она показывалась только при наведении на "Каталог товаров"? */
-.site-navigation-list{
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
-.site-navigation-list a {
-  line-height: 30px;
+.site-navigation-item {
+  outline: 1px solid;
+}
+.site-navigation-item:first-child {
+  width: 540px;
+  /* outline: 1px solid; */
+}
+.site-navigation-item:nth-child(2) {
+  margin-right: 35px;
+}
+.site-navigation-item:nth-child(4) {
+  margin-left: auto;
 }
 .site-navigation-item:first-child>a {
   background-image: url("../img/plus.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
+.catalog-navigation {
+  width: 555px;
+  min-height: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 25px;
+}
+.catalog-navigation-item {
+  display: flex;
+  margin-bottom: 5px;
+  /* outline: 1px solid; */
+}
+.catalog-navigation-item:nth-child(4) {
+  margin-right: auto;
+}
+.catalog-navigation-item:nth-child(5) {
+  flex-basis: 306px;
+}
+.catalog-navigation-item:last-child {
+  margin-bottom: 0;
+}
+.catalog-navigation a {
+  line-height: 30px;
+}
 /* Слайды */
+.product-slides {
+  display: flex;
+  flex-wrap: wrap;
+  outline: 1px solid;
+}
+.slide {
+  display: flex;
+  margin: auto;
+}
+.slide img,
+.slide-description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+  margin: auto;
+  outline: 1px solid;
+}
+.slide img {
+  margin-right: 40px;
+}
 .slide .title {
   line-height: 56px;
 }
-/* Почему кнопка не хочет изменять свои размеры ни в какую? Дело в сетке?(я пока что сетку и блочную модель еще не смотрел подробнее) */
+.slide-navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
 .slide .button {
   width: 220px;
 }
@@ -183,6 +278,7 @@ a:active:not(.button) {
   font-weight: 300;
   color: #000000;
   line-height: 48px;
+  letter-spacing: 0.36px;
 }
 .characteristics .table-row:nth-child(2) {
   font-size: 13px;
@@ -196,21 +292,32 @@ a:active:not(.button) {
 }
 /* Каталог товаров */
 .catalog-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   font-size: 18px;
+  justify-content: space-between;
 }
 /* Короче, пока не знаю, как сделать тут, чтобы было как на макете) */
+.catalog-item {
+  display: flex;
+}
 .catalog-item a {
+  display: block;
   width: 160px;
   height: 240px;
-  display: flex;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.18px;
   text-transform: none;
-  vertical-align: bottom;
-  background-color: #f7e296;
-  background-size: 160px 16px;
+  padding-top: 20px;;
+  outline: 1px solid;
 }
-.catalog-item a:hover {
+.catalog-item h3 {
+  margin: 0;
+  display: flex;
+}
+.catalog-item h3:hover {
   color: #000000;
   background-color: #f0c52e;
 }
@@ -218,11 +325,15 @@ a:active:not(.button) {
   color: rgba(0, 0, 0, 0.3);
   background-color: #f0c52e;
 }
-.catalog-item:first-child a {
+.catalog-item:first-child h3 {
+  /* width: 160px;
+  height: 160px; */
+  /* margin-bottom: 33px; */
+  background-color: #f7e296;
   background-image: url("../img/popular-1.svg");
   background-size: 97px 55px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
 .catalog-item:nth-child(2) a {
   background-image: url("../img/popular-2.svg");
@@ -292,7 +403,11 @@ a:active:not(.button) {
 /* Логотипы */
 .logotypes-list {
   display: flex;
+  justify-content: space-around;
   list-style: none;
+}
+.logotypes-item {
+  outline: 1px solid;
 }
 .dji a:hover {
   display: flex;
@@ -319,13 +434,39 @@ a:active:not(.button) {
   background-repeat: no-repeat;
 }
 /* Описание компании */
+.description-company {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.description-company section {
+  display: flex;
+  flex-wrap: wrap;
+  outline: 1px solid;
+}
+.description-company .title,
+.about-us .company-list,
+.contacts p {
+  width: 560px;
+}
+.description-company .about-us {
+  margin-right: 40px;
+}
+
 .description-company p {
   letter-spacing: normal;
 }
 .description-company .button {
   width: 260px;
 }
+.about-us p {
+  width: 475px;
+}
 .company-list{
+  margin: 0;
+  padding: 0;
+  margin-left: 35px;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -334,15 +475,21 @@ a:active:not(.button) {
   color: #000000;
 }
 /* Подвал */
+/* Странно, футер начинает обрезаться при приближении */
 .main-footer {
+  display: flex;
   background-color: #464646;
   color: #ffffff;
+  min-height: 323px;
 }
 .main-footer a {
   color: inherit;
 }
 .main-footer ul {
   list-style: none;
+}
+.main-footer .footer-top {
+  display: flex;
 }
 .footer-top .footer-logo {
   color: #ffc600;
@@ -352,6 +499,11 @@ a:active:not(.button) {
 }
 .footer-top .footer-logo:active {
   color: rgba(255, 198, 0, 0.3);
+}
+.footer-top .footer-user-navigation {
+  display: flex;
+  width: 480px;
+  justify-content: space-between;
 }
 /* Пока что не знаю, как сделать иконки с хедера здесь желтыми */
 .footer-user-navigation a {
@@ -375,9 +527,21 @@ a:active:not(.button) {
 .footer-site-navigation a:active {
   color: rgba(255, 255, 255, 0.3);
 }
+.main-footer .footer-middle {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-middle .footer-site-navigation {
+  display: flex;
+  width: 440px;
+  justify-content: space-between;
+}
 .address,
 .phone {
   letter-spacing: normal;
+}
+.main-footer .footer-bottom {
+  display: flex;
 }
 .footer-social-item a {
   opacity: 0.3;
@@ -408,24 +572,58 @@ a:active:not(.button) {
   background-size: 27px 34px;
   background-repeat: no-repeat;
 }
+/* Как тут скрыть эту надпись? */
+.footer-bootom .html-academy {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 .footer-bottom a:hover {
   opacity: 0.6;
 }
-.footer-tootom a:active {
+.footer-bootom a:active {
   opacity: 0.3;
 }
 /* Окно "Написать нам" */
+.write-us {
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  margin: auto;
+  outline: 1px solid;
+}
 .close-button {
+  align-self: flex-end;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   opacity: 0.5;
+  margin: 22px 22px 20px 883px;
 }
 .close-button:hover {
   opacity: 1.0;
 }
 .close-button:active {
   opacity: 0.3;
+}
+.write-us-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 100px;
+  outline: 1px solid;
+}
+.letter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
+  outline: 1px solid;
+}
+.letter:first-child {
+  margin-right: 40px;
+}
+.letter:last-of-type {
+  min-width: 760px;
 }
 .letter label {
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
@@ -434,6 +632,11 @@ a:active:not(.button) {
   color: #000000;
   line-height: 24px;
   letter-spacing: normal;
+  width: 360px;
+}
+.letter:last-of-type label,
+.letter:last-of-type .field {
+  width: 760px;
 }
 .letter .field {
   font-size: 14px;
@@ -443,6 +646,8 @@ a:active:not(.button) {
   border: 0;
   background-color: rgba(230, 230, 230, 0.5);
   color: rgba(70, 70, 70, 0.4);
+  width: 360px;
+  padding: 16px 0 16px 20px;
 }
 .letter .field:hover {
   background-color: rgba(230, 230, 230, 0.8);
@@ -473,7 +678,7 @@ a:active:not(.button) {
   font-weight: 300;
   text-transform: none ;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.14px;
   color: rgba(0, 0, 0, 0.3)
 }
 .breadcrumbs-item:first-child a,
@@ -496,7 +701,7 @@ a:active:not(.button) {
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.18px;
   color: #000000;
 }
 .filter>p {
@@ -504,6 +709,7 @@ a:active:not(.button) {
   padding: 0;
   text-transform: uppercase;
   background-color: #dbdbdb;
+  letter-spacing: 3.2px;
 }
 .filter ul {
   list-style: none;
@@ -519,6 +725,7 @@ a:active:not(.button) {
   font-size: 14px;
   font-weight: 300;
   line-height: 40px;
+  letter-spacing: 0.14px;
 }
 /* Как сделать нестандартные чекбоксы и радио? */
 .form-item input:hover {
@@ -546,7 +753,8 @@ a:active:not(.button) {
   width: 200px;
 }
 .sorting p {
-  letter-spacing: 3.6px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
 }
 .sorting-item a {
   font-family: "Open Sans", Arial, sans-serif;
@@ -571,7 +779,7 @@ a:active:not(.button) {
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.18px;
   text-transform: none;
 }
 .product-item p {
@@ -579,7 +787,7 @@ a:active:not(.button) {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.16px;
 }
 .compare-button {
   border: 0;
@@ -587,7 +795,7 @@ a:active:not(.button) {
   font-size: 13px;
   font-weight: 300;
   line-height: 20px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.13px;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -604,6 +812,7 @@ a:active:not(.button) {
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
+  letter-spacing: 3.2px;
 }
 .pagination-item:nth-child(3) a,
 .pagination-item:nth-child(4) a {

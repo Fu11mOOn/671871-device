@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="container main-header">
       <nav class="main-navigation">
         <a class="header-logo">Device</a>
         <form class="search" action="https://echo.htmlacademy.ru" method="get">
@@ -31,28 +31,9 @@
           </li>
         </ul>
         <ul class="site-navigation">
-          <li class="site-navigation-item catalog-navigation">
+          <li class="site-navigation-item">
             <a href="#">Каталог товаров</a>
-            <ul class="site-navigation-list">
-              <li class="site-navigation-list-item">
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li class="site-navigation-list-item">
-                <a href="#">Фитнес браслеты</a>
-              </li>
-              <li class="site-navigation-list-item">
-                <a href="#">Квадрокоптеры</a>
-              </li>
-              <li class="site-navigation-list-item">
-                <a href="inner.html">Моноподы для селфи</a>
-              </li>
-              <li class="site-navigation-list-item">
-                <a href="#">Умные часы</a>
-              </li>
-              <li class="site-navigation-list-item">
-                <a href="#">Экшн-камеры</a>
-              </li>
-            </ul>
+          </li>
           <li class="site-navigation-item">
             <a href="#">Доставка</a>
           </li>
@@ -62,76 +43,104 @@
           <li class="site-navigation-item">
             <a href="#">Контакты</a>
           </li>
+          <li class="site-navigation-item">
+            <ul class="catalog-navigation">
+              <li class="catalog-navigation-item">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Фитнес браслеты</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Квадрокоптеры</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="inner.html">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Умные часы</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
-    <main class="container-index">
+    <main class="container">
       <h1 class="visually-hidden">Магазин гаджетов DEVICE</h1>
       <section class="product-slides">
         <h2 class="visually-hidden">Слайды товаров</h2>
         <!-- Вернусь сюда после лекции про слайды -->
         <section class="slide">
-          <img src="img/slider-1.png" width="384" height="486" alt="Длинная и компактная селфи-палка">
-          <h3 class="title">Делай селфи,<br>
-          как Бен Стиллер!</h3>
-          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="button" href="#">Подробнее</a>
-          <!-- Навигация по слайдам -->
-          <ul class="slide-navigation">
-            <li>
-              <button type="button" name="button">x</button>
-            </li>
-            <li>
-              <button type="button" name="button">x</button>
-            </li>
-            <li>
-              <button type="button" name="button">x</button>
-            </li>
-          </ul>
-          <table class="characteristics">
-            <tr class="table-row">
-              <td>8,5 м</td>
-              <td>5 кг</td>
-              <td>Карбон</td>
-            </tr>
-            <tr class="table-row">
-              <td>Длина палки</td>
-              <td>Вес палки</th>
-              <td>Материал</td>
-            </tr>
-          </table>
+          <img class="left-side" src="img/slider-1.png" width="384" height="486" alt="Длинная и компактная селфи-палка">
+          <div class="slide-description">
+            <h3 class="title">Делай селфи,<br>
+            как Бен Стиллер!</h3>
+            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="button" href="#">Подробнее</a>
+            <!-- Навигация по слайдам -->
+            <ul class="slide-navigation">
+              <li>
+                <button type="button" name="button">x</button>
+              </li>
+              <li>
+                <button type="button" name="button">x</button>
+              </li>
+              <li>
+                <button type="button" name="button">x</button>
+              </li>
+            </ul>
+            <table class="characteristics">
+              <tr class="table-row">
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+              <tr class="table-row">
+                <td>Длина палки</td>
+                <td>Вес палки</th>
+                <td>Материал</td>
+              </tr>
+            </table>
+          </div>
         </section>
         <section class="slide">
           <img src="img/slider-2.png" width="345" height="485" alt="Удобный фитнес-браслет">
-          <h3 class="title">Худеем<br>
-          правильно!</h3>
-          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <a class="button" href="#">Подробнее</a>
-          <table class="characteristics">
-            <tr class="table-row">
-              <td>48 часов</td>
-            </tr>
-            <tr class="table-row">
-              <td>Без подзарядки</td>
-            </tr>
-          </table>
+          <div class="slide-description">
+            <h3 class="title">Худеем<br>
+            правильно!</h3>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="button" href="#">Подробнее</a>
+            <table class="characteristics">
+              <tr class="table-row">
+                <td>48 часов</td>
+              </tr>
+              <tr class="table-row">
+                <td>Без подзарядки</td>
+              </tr>
+            </table>
+          </div>
         </section>
         <section class="slide">
           <img src="img/slider-3.png" width="526" height="334" alt="Технологичный квадрокоптер с лазером">
-          <h3 class="title">Порхает как бабочка,<br>
-          жалить как пчела!</h3>
-          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-          <a class="button" href="#">Подробнее</a>
-          <table class="characteristics">
-            <tr class="table-row">
-              <td>800 м</td>
-              <td>50 м</td>
-            </tr>
-            <tr class="table-row">
-              <td>Дальность полета</td>
-              <td>Радиус поражения</td>
-            </tr>
-          </table>
+          <div class="slide-description">
+            <h3 class="title">Порхает как бабочка,<br>
+            жалит как пчела!</h3>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="button" href="#">Подробнее</a>
+            <table class="characteristics">
+              <tr class="table-row">
+                <td>800 м</td>
+                <td>50 м</td>
+              </tr>
+              <tr class="table-row">
+                <td>Дальность полета</td>
+                <td>Радиус поражения</td>
+              </tr>
+            </table>
+          </div>
         </section>
       </section>
       <ul class="catalog-list" title="Разделы каталога товаров">
@@ -196,7 +205,6 @@
           </div>
         </section>
       </section>
-      <!-- Тут тоже section и h2 убрал, а ul оставить? Думаю, что section для больших разделов, а для маленького списка ссылок и ul сойдет -->
       <ul class="logotypes-list" title="Логотипы">
         <li class="logotypes-item dji">
           <a href="#">
@@ -219,7 +227,7 @@
             </a>
         </li>
       </ul>
-      <div class="description-company">
+      <div class="container description-company">
         <section class="about-us">
           <h2 class="title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика,
@@ -236,58 +244,62 @@
         <section class="contacts">
           <h2 class="title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <img src="img/map.png" width="560" height="222" alt="">
+          <img src="img/map.png" width="560" height="222" alt="Улица строителе, 15">
           <!-- интерактивная карта -->
           <a class="button" href="#">Напишите нам</a>
         </section>
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-top">
-        <a class="footer-logo">Device</a>
-        <ul class="footer-user-navigation">
-          <li class="footer-user-navigation-item">
-            <a href="#">Профиль</a>
-          </li>
-          <li class="footer-user-navigation-item">
-            <a href="#">Войти</a>
-          </li>
-          <li class="footer-user-navigation-item">
-            <a href="#">Сравить</a>
-          </li>
-          <li class="footer-user-navigation-item">
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-middle">
-        <p class="address">г. Москва, ул. Строителей, 15</p>
-        <ul class="footer-site-navigation">
-          <li class="footer-site-navigation-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="footer-site-navigation-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="footer-site-navigation-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-        <p class="phone">Тел.: +7 (495) 495-95-95</p>
-      </div>
-      <div class="footer-bottom">
-        <ul class="footer-social">
-          <li class="footer-social-item">
-            <a class="social-button" href="#">Фейсбук</a>
-          </li>
-          <li class="footer-social-item">
-            <a class="social-button" href="#">Инстаграм</a>
-          </li>
-          <li class="footer-social-item">
-            <a class="social-button" href="#">Твиттер</a>
-          </li>
-        </ul>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Лендинг интенсива «Профессиональный HTML и CSS, уровень 1</a>
+      <div class="container">
+        <div class="footer-top">
+          <a class="footer-logo">Device</a>
+          <ul class="footer-user-navigation">
+            <li class="footer-user-navigation-item">
+              <a href="#">Профиль</a>
+            </li>
+            <li class="footer-user-navigation-item">
+              <a href="#">Войти</a>
+            </li>
+            <li class="footer-user-navigation-item">
+              <a href="#">Сравить</a>
+            </li>
+            <li class="footer-user-navigation-item">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <p class="address">г. Москва, ул. Строителей, 15</p>
+          <ul class="footer-site-navigation">
+            <li class="footer-site-navigation-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="footer-site-navigation-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="footer-site-navigation-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <p class="phone">Тел.: +7 (495) 495-95-95</p>
+        </div>
+        <div class="footer-bottom">
+          <ul class="footer-social">
+            <li class="footer-social-item">
+              <a class="social-button" href="#">Фейсбук</a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-button" href="#">Инстаграм</a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-button" href="#">Твиттер</a>
+            </li>
+          </ul>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <span class="html-academy">Лендинг интенсива «Профессиональный HTML и CSS, уровень 1</span>
+          </a>
+        </div>
       </div>
     </footer>
 <!-- Окно write-us -->
