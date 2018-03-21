@@ -738,6 +738,7 @@ a:active:not(.button) {
 }
 .selfi-container {
   display: flex;
+  flex-shrink: 1;
 }
 /* Фильтр */
 .filter {
@@ -753,7 +754,6 @@ a:active:not(.button) {
   color: #000000;
   outline: 1px solid;
   background-color: #ebebeb;
-  /* align-items: stretch; */
 }
 /* Пытался в это обернуть Фильтр: */
 .lol {
@@ -762,25 +762,37 @@ a:active:not(.button) {
   align-self: flex-end;
 }
 .filter>p {
+  display: flex;
   margin: 0;
   padding: 0;
-  width: 500px;
+  min-height: 70px;
   text-transform: uppercase;
   letter-spacing: 3.2px;
   background-color: #dbdbdb;
-  /* padding-right: 180px; */
-  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 170px;
+  flex-shrink: 1;
 }
 .filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .filter-form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   width: 200px;
   background-color: #ebebeb;
   align-self: flex-end;
   outline: 1px solid;
+  padding-right: 65px;
 }
 .filter-form fieldset {
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 .form-list {
@@ -816,26 +828,35 @@ a:active:not(.button) {
   width: 200px;
 }
 .selection-box {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   flex-grow: 1;
+  flex-direction: column;
   outline: 1px solid;
 }
 .sorting {
   display: flex;
-  width: 830px;
+  min-height: 70px;
   background-color: #ebebeb;
+  padding-left: 72px;
+  align-items: center;
 }
 .sorting p {
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 24px;
   letter-spacing: 3.2px;
   text-transform: uppercase;
 }
 .sorting-list {
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
   list-style: none;
+  padding-left: 53px;
 }
 .sorting-item a {
   font-family: "Open Sans", Arial, sans-serif;
@@ -845,6 +866,15 @@ a:active:not(.button) {
   text-transform: none;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.3);
+}
+.sorting-item:first-child a {
+  margin-right: 29px;
+}
+.sorting-item:nth-child(2) a {
+  margin-right: 31px;
+}
+.sorting-item:nth-child(3) a {
+  margin-right: 100px;
 }
 .sorting-item:first-child a,
 .sorting-item:last-child a {
@@ -857,18 +887,25 @@ a:active:not(.button) {
   color: #000000;
 }
 .generated-conrainer {
+  margin-top: 70px;
+  margin-left: 70px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   width: 760px;
-  margin-right: 73px;
+  flex-direction: column;
 }
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  justify-content: space-between;
+  /* align-content: space-between; */
+}
+.product-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
 }
 .product-item a {
   font-size: 18px;
@@ -901,13 +938,29 @@ a:active:not(.button) {
   color: rgba(0, 0, 0, 0.2);
 }
 .pagination-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 70px;
   background-color: #ebebeb;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 25px;
 }
 .pagination-item a {
+  display: flex;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 3.2px;
+}
+.pagination-item:first-child a {
+  margin-right: 225px;
+}
+.pagination-item:last-child a {
+  margin-left: 220px;
 }
 .pagination-item:nth-child(3) a,
 .pagination-item:nth-child(4) a {
@@ -936,20 +989,4 @@ a:active:not(.button) {
 .pagination-item:last-child a:active {
   background-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.3);
-}
-.lol {
-  display: flex;
-  /* flex-wrap: wrap; */
-}
-.lol1 {
-  background-color: red;
-}
-.lol2 {
-  background-color: blue;
-}
-.lol3 {
-  background-color: green;
-}
-.lol4 {
-  background-color: orange;
 }
