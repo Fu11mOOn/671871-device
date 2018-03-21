@@ -49,17 +49,23 @@ a:active:not(.button) {
   color: rgba(0, 0, 0, 0.3);
 }
 .button {
-  width: 160px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 8px;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-  padding: 12px auto;
   border: 0;
   background-color: #f0c52e;
-  background-size: 220px 8px;
+}
+.button:hover {
+  width: 220px;
+  height: 40px;
+  background-color: #f0c52e;
 }
 .button:active {
   color: rgba(0, 0, 0, 0.3);
@@ -267,7 +273,7 @@ a:active:not(.button) {
   list-style: none;
 }
 .slide .button {
-  width: 220px;
+  /* height: 40px; */
 }
 .characteristics {
   border-collapse: collapse;
@@ -300,35 +306,27 @@ a:active:not(.button) {
   font-size: 18px;
   justify-content: space-between;
 }
-/* Короче, пока не знаю, как сделать тут, чтобы было как на макете) */
 .catalog-item {
-  display: flex;
+  min-height: 240px;
 }
 .catalog-item a {
-  display: block;
+  display: inline-block;
   width: 160px;
   height: 240px;
   letter-spacing: 0.18px;
   text-transform: none;
-  padding-top: 20px;;
+  padding-top: 20px;
   outline: 1px solid;
 }
 .catalog-item h3 {
-  margin: 0;
-  display: flex;
+  margin-top: 195px;
 }
-.catalog-item h3:hover {
-  color: #000000;
-  background-color: #f0c52e;
+.catalog-item:nth-child(2) h3 {
+  margin-right: 50px;
 }
-.catalog-item a:active {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #f0c52e;
-}
-.catalog-item:first-child h3 {
-  /* width: 160px;
-  height: 160px; */
-  /* margin-bottom: 33px; */
+.catalog-item:first-child a {
+  width: 160px;
+  height: 160px;
   background-color: #f7e296;
   background-image: url("../img/popular-1.svg");
   background-size: 97px 55px;
@@ -336,39 +334,66 @@ a:active:not(.button) {
   background-position: center;
 }
 .catalog-item:nth-child(2) a {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
   background-image: url("../img/popular-2.svg");
   background-size: 86px 117px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
 .catalog-item:nth-child(3) a {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
   background-image: url("../img/popular-3.svg");
   background-size: 71px 87px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
 .catalog-item:nth-child(4) a {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
   background-image: url("../img/popular-4.svg");
   background-size: 107px 65px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
 .catalog-item:nth-child(5) a {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
   background-image: url("../img/popular-5.svg");
   background-size: 56px 98px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
 .catalog-item:last-child a {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
   background-image: url("../img/popular-6.svg");
   background-size: 132px 69px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
+}
+.catalog-item a:hover {
+  color: #000000;
+  background-color: #f0c52e;
+}
+.catalog-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f0c52e;
 }
 /* Сервис-слайды */
 .service-slide {
   display: flex;
+  align-items: center;
   background-color: #e5e5e5;
+}
+.lol {
+  width: 280px;
 }
 .service-slide:first-of-type .service-description {
   background-image: url("../img/delivery-slide.svg");
@@ -389,7 +414,7 @@ a:active:not(.button) {
   background-position: top center;
 }
 .service-slide .button {
-  background-size: 160px 8px;
+  width: 160px;
 }
 .service-slide .button:hover {
   background-size: 160px 40px;
@@ -667,9 +692,27 @@ a:active:not(.button) {
   width: 200px;
 }
 /* Внутрення страница */
+.title-inner {
+  margin-left: 60px;
+}
 /* breadcrumbs */
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 382px;
   list-style: none;
+  margin-left: 60px;
+}
+.breadcrumbs-item:first-child {
+  width: 72px;
+}
+.breadcrumbs-item:nth-child(2) {
+  width: 132px;
+}
+.breadcrumbs-item:last-child {
+  width: 145px;
 }
 .breadcrumbs-item,
 .breadcrumbs-item a{
@@ -693,29 +736,49 @@ a:active:not(.button) {
 .breadcrumbs a:active {
   color: rgba(0, 0, 0, 0.1);
 }
+.selfi-container {
+  display: flex;
+}
 /* Фильтр */
 .filter {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 267px;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
   letter-spacing: 0.18px;
   color: #000000;
+  outline: 1px solid;
+  background-color: #ebebeb;
+  /* align-items: stretch; */
+}
+/* Пытался в это обернуть Фильтр: */
+.lol {
+  display: flex;
+  background-color: #dbdbdb;
+  align-self: flex-end;
 }
 .filter>p {
   margin: 0;
   padding: 0;
+  width: 500px;
   text-transform: uppercase;
-  background-color: #dbdbdb;
   letter-spacing: 3.2px;
+  background-color: #dbdbdb;
+  /* padding-right: 180px; */
+  text-align: right;
 }
 .filter ul {
   list-style: none;
 }
 .filter-form {
+  width: 200px;
   background-color: #ebebeb;
+  align-self: flex-end;
+  outline: 1px solid;
 }
 .filter-form fieldset {
   border: 0;
@@ -752,9 +815,27 @@ a:active:not(.button) {
 .filter-form .button {
   width: 200px;
 }
+.selection-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  outline: 1px solid;
+}
+.sorting {
+  display: flex;
+  width: 830px;
+  background-color: #ebebeb;
+}
 .sorting p {
   letter-spacing: 3.2px;
   text-transform: uppercase;
+}
+.sorting-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .sorting-item a {
   font-family: "Open Sans", Arial, sans-serif;
@@ -774,6 +855,20 @@ a:active:not(.button) {
 }
 .sorting-item a:active {
   color: #000000;
+}
+.generated-conrainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 760px;
+  margin-right: 73px;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .product-item a {
   font-size: 18px;
@@ -841,4 +936,20 @@ a:active:not(.button) {
 .pagination-item:last-child a:active {
   background-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.3);
+}
+.lol {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.lol1 {
+  background-color: red;
+}
+.lol2 {
+  background-color: blue;
+}
+.lol3 {
+  background-color: green;
+}
+.lol4 {
+  background-color: orange;
 }
