@@ -41,7 +41,6 @@ a {
   color: #000000;
   text-transform: uppercase;
 }
-/* Ничего что так глобально ссылки оформил? */
 a:hover:not(.button) {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -94,7 +93,6 @@ a:active:not(.button) {
 .main-header {
   display: flex;
   min-height: 300px;
-  /* margin: 40px auto; */
 }
 .main-navigation {
   background-color: #f7e296;
@@ -192,7 +190,6 @@ a:active:not(.button) {
   background-size: 12px 12px;
   background-repeat: no-repeat;
 }
-/* Как спрятать мининавигацию и сделать, чтобы она показывалась только при наведении на "Каталог товаров"? */
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +200,6 @@ a:active:not(.button) {
 }
 .site-navigation-item:first-child {
   width: 540px;
-  /* outline: 1px solid; */
 }
 .site-navigation-item:nth-child(2) {
   margin-right: 35px;
