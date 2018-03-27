@@ -12,8 +12,10 @@
       <nav class="main-navigation">
           <a class="header-logo">Device</a>
           <form class="search" action="https://echo.htmlacademy.ru" method="get">
-            <label for="search-site">Поиск</label>
             <input id="search-site" type="search" name="search" placeholder="Поиск по сайту" autocomplete>
+            <label for="search-site">
+              <span class="visually-hidden">Поиск</span>
+            </label>
             <button class="search-button" type="submit">Найти</button>
           </form>
           <ul class="user-navigation">
@@ -70,11 +72,6 @@
         <input type="radio" id="btn-1" name="toggle" checked>
         <input type="radio" id="btn-2" name="toggle">
         <input type="radio" id="btn-3" name="toggle">
-        <div class="slide-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
-        </div>
         <section class="slide">
           <div class="img-container">
             <img class="left-side" src="img/slider-1.png" width="384" height="486" alt="Длинная и компактная селфи-палка">
@@ -138,6 +135,11 @@
             </table>
           </div>
         </section>
+        <div class="slide-controls">
+          <label for="btn-1" tabindex="0"></label>
+          <label for="btn-2" tabindex="0"></label>
+          <label for="btn-3" tabindex="0"></label>
+        </div>
       </section>
       <ul class="catalog-list container" title="Разделы каталога товаров">
         <li class="catalog-item">
@@ -179,9 +181,9 @@
             <input id="button-2" type="radio" name="toggle2">
             <input id="button-3" type="radio" name="toggle2">
             <div class="slide-service-controls">
-              <label class="button" for="button-1">Доставка</label>
-              <label class="button" for="button-2">Гарантия</label>
-              <label class="button" for="button-3">Кредит</label>
+              <label class="button" for="button-1" tabindex="0">Доставка</label>
+              <label class="button" for="button-2" tabindex="0">Гарантия</label>
+              <label class="button" for="button-3" tabindex="0">Кредит</label>
             </div>
             <section class="service-slide">
               <h3 class="title">Доставка</h3>
@@ -278,7 +280,7 @@
           <div class="footer-top">
             <a class="footer-logo">Device</a>
             <ul class="footer-user-navigation">
-              <li class="footer-user-navigation-item user-enter-yellow">
+              <li class="footer-user-navigation-item user-enter-yellow user-enter-index">
                 <a href="#">Войти</a>
               </li>
               <li class="footer-user-navigation-item compare-yellow">
