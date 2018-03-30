@@ -161,13 +161,13 @@ a:active:not(.button) {
   margin-left:auto;
   background-color: transparent;
 }
-.search input:focus ~ button {
+input[type="search"]:focus ~ button {
   display: block;
 }
 .search input:focus {
   border-bottom: 2px solid #000000;
 }
-.search input:focus ~ label {
+input[type="search"]:focus ~ label {
   height: 48px;
   border-bottom: 2px solid #000000;
 }
@@ -1386,7 +1386,7 @@ a:active:not(.button) {
   background-repeat: no-repeat;
   background-size: 25px 25px;
 }
-.product-color input:checked ~ label::before {
+input[type="checkbox"]:checked ~ label::before {
   top: -2px;
   width: 27px;
   height: 28px;
@@ -1394,17 +1394,17 @@ a:active:not(.button) {
   background-repeat: no-repeat;
   background-size: 27px 27px;
 }
-.product-color input:checked:not(:disabled) ~ label:hover::before,
-.product-color input:not(:checked):not(:disabled) ~ label:hover::before,
-.bluetooth input:checked:not(:disabled) ~ label:hover::before,
-.bluetooth input:not(:checked):not(:disabled) ~ label:hover::before {
+input[type="checkbox"]:checked:not(:disabled) ~ label:hover::before,
+input[type="checkbox"]:not(:checked):not(:disabled) ~ label:hover::before,
+input[type="radio"]:checked:not(:disabled) ~ label:hover::before,
+input[type="radio"]:not(:checked):not(:disabled) ~ label:hover::before {
   opacity: 0.6;
 }
-.product-color input:disabled ~ label,
-.bluetooth input:disabled ~ label {
+input[type="checkbox"]:disabled ~ label,
+input[type="radio"]:disabled ~ label {
   opacity: 0.25;
 }
-.bluetooth input:checked ~ label::before {
+input[type="radio"]:checked ~ label::before {
   background-image: url(../img/radio-on.svg);
 }
 .filter-form .button {
@@ -1562,16 +1562,10 @@ a:active:not(.button) {
   top: 60%;
   left: 28%;
 }
-.product-item:first-child .selection-menu:hover img,
-.product-item:nth-child(2) .selection-menu:hover img,
-.product-item:nth-child(3) .selection-menu:hover img,
-.product-item:nth-child(4) .selection-menu:hover img {
+.selection-menu:hover img {
   opacity: 0.7;
 }
-.product-item:first-child .selection-menu:hover button,
-.product-item:nth-child(2) .selection-menu:hover button,
-.product-item:nth-child(3) .selection-menu:hover button,
-.product-item:nth-child(4) .selection-menu:hover button {
+.selection-menu:hover button {
   visibility: visible;
 }
 .compare-button {
