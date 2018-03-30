@@ -1515,7 +1515,10 @@ a:active:not(.button) {
   align-content: flex-start;
   margin-bottom: 35px;
 }
-.product-item:nth-child(4) .selection-menu::after {
+.new-item {
+  position: relative;
+}
+.new-item::after {
   content: "NEW";
   display: flex;
   position: absolute;
