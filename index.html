@@ -5,7 +5,7 @@
     <title>Магазин гаджетов DEVICE</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master.min.css">
   </head>
   <body>
     <header class="main-header container">
@@ -89,7 +89,7 @@
               </tr>
               <tr class="table-row">
                 <td>Длина палки</td>
-                <td>Вес палки</th>
+                <td>Вес палки</td>
                 <td>Материал</td>
               </tr>
             </table>
@@ -247,18 +247,21 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img src="img/map.png" width="560" height="222" alt="Улица строителе, 15">
           <div class="map-container">
-            <button class="close-button-map" type="button">Закрыть</button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.6812077155096!2d37.528143189451605!3d55.68757513420582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522401326164" width="960" height="560" style="border:0" allowfullscreen></iframe>
+            <button class="close-button close-button-map" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
           </div>
-          <button class="button" href="#">Напишите нам</button>
-          <button class="close-button" type="button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
+          <button class="button write-us-button">Напишите нам</button>
           <section class="write-us">
             <h2 class="visually-hidden">Окно отправки письма</h2>
+            <button class="close-button close-button-popup" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
             <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="letter">
                 <label for="name">Ваше имя:</label>
-                <input class="field" id="name" type="text" name="name" placeholder="Имя Фамилия">
+                <input class="field" id="name" type="text" name="name-user" placeholder="Имя Фамилия">
               </div>
               <div class="letter">
                 <label for="email">Ваш e-mail:</label>
@@ -314,12 +317,13 @@
                 </a>
               </li>
               <li class="footer-social-item">
-                <a class="social-button" href="#"><span class="visually-hidden">
+                <a class="social-button" href="#">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
               <li class="footer-social-item">
-                <a class="social-button" href="#"><span class="visually-hidden">Твиттер</span>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Твиттер</span>
                 </a>
               </li>
             </ul>
@@ -330,5 +334,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/popup.min.js"></script>
+    <script src="js/map.min.js"></script>
   </body>
 </html>

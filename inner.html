@@ -5,7 +5,7 @@
     <title>Моноподы для селфи</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master.min.css">
   </head>
   <body>
     <header class="main-header container">
@@ -90,8 +90,8 @@
                 <p>Стоимость</p>
                 <input id="price" type="range" name="price" value="5000" step="100" max="8000">
                 <label for="price"></label>
-                <span>от 0</span>
-                <span>до 5000</span>
+                <span class="point">от 0</span>
+                <span class="point">до 5000</span>
               </div>
               <div class="product-color">
                 <p>Цвет</p>
@@ -142,7 +142,7 @@
               <p>Сортировка:</p>
               <ul class="sorting-list">
                 <li class="sorting-item">
-                  <a href="#" active>По цене</a>
+                  <a href="#">По цене</a>
                 </li>
                 <li class="sorting-item">
                   <a href="#">По типу</a>
@@ -277,12 +277,13 @@
                 </a>
               </li>
               <li class="footer-social-item">
-                <a class="social-button" href="#"><span class="visually-hidden">
+                <a class="social-button" href="#">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
               <li class="footer-social-item">
-                <a class="social-button" href="#"><span class="visually-hidden">Твиттер</span>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Твиттер</span>
                 </a>
               </li>
             </ul>
