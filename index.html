@@ -3,67 +3,67 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин гаджетов DEVICE</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/master.min.css">
   </head>
   <body>
     <header class="main-header container">
+      <div class="main-header-background main-header-background-index"></div>
       <nav class="main-navigation">
-          <a class="header-logo">Device</a>
-          <form class="search" action="https://echo.htmlacademy.ru" method="get">
-            <input id="search-site" type="search" name="search" placeholder="Поиск по сайту" autocomplete>
-            <label for="search-site">
-              <span class="visually-hidden">Поиск</span>
-            </label>
-            <button class="search-button" type="submit">Найти</button>
-          </form>
-          <ul class="user-navigation">
-            <li class="user-navigation-item user-enter">
-              <a href="#">Войти</a>
-            </li>
-            <li class="user-navigation-item compare">
-              <a href="#">Сравнить</a>
-            </li>
-            <li class="user-navigation-item cart">
-              <a href="#">Корзина</a>
-            </li>
-          </ul>
-          <ul class="site-navigation">
-            <li class="site-navigation-item catalog">
-              <a href="#">Каталог товаров</a>
-              <ul class="catalog-navigation">
-                <li class="catalog-navigation-item">
-                  <a href="#">Виртуальная реальность</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a href="#">Фитнес браслеты</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a href="#">Квадрокоптеры</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a href="inner.html">Моноподы для селфи</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a href="#">Умные часы</a>
-                </li>
-                <li class="catalog-navigation-item">
-                  <a href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-            </li>
-            <li class="site-navigation-item">
-              <a href="#">Доставка</a>
-            </li>
-            <li class="site-navigation-item">
-              <a href="#">Гарантия</a>
-            </li>
-            <li class="site-navigation-item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <a class="header-logo index-logo">Device</a>
+        <form class="search" action="https://echo.htmlacademy.ru" method="get">
+          <input id="search-site" type="search" name="search" placeholder="Поиск по сайту" autocomplete>
+          <label for="search-site">
+            <span class="visually-hidden">Поиск</span>
+          </label>
+          <button class="search-button" type="submit">Найти</button>
+        </form>
+        <ul class="user-navigation">
+          <li class="user-navigation-item user-enter">
+            <a href="#">Войти</a>
+          </li>
+          <li class="user-navigation-item compare">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation-item cart">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+        <ul class="site-navigation">
+          <li class="site-navigation-item catalog">
+            <a href="#">Каталог товаров</a>
+            <ul class="catalog-navigation">
+              <li class="catalog-navigation-item">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Фитнес браслеты</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Квадрокоптеры</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="inner.html">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Умные часы</a>
+              </li>
+              <li class="catalog-navigation-item">
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <h1 class="visually-hidden">Магазин гаджетов DEVICE</h1>
@@ -84,12 +84,12 @@
             <table class="characteristics">
               <tr class="table-row">
                 <td>8,5 м</td>
-                <td>5 кг</td>
+                <td class="second-column">5 кг</td>
                 <td>Карбон</td>
               </tr>
               <tr class="table-row">
                 <td>Длина палки</td>
-                <td>Вес палки</td>
+                <td class="second-column">Вес палки</td>
                 <td>Материал</td>
               </tr>
             </table>
@@ -142,32 +142,32 @@
         </div>
       </section>
       <ul class="catalog-list container" title="Разделы каталога товаров">
-        <li class="catalog-item">
+        <li class="catalog-item catalog-vr">
           <a href="#">
             <h3>Виртуальная реальность</h3>
           </a>
         </li>
-        <li class="catalog-item">
+        <li class="catalog-item catalog-selfi">
           <a href="inner.html">
             <h3>Моноподы для селфи</h3>
           </a>
         </li>
-        <li class="catalog-item">
+        <li class="catalog-item catalog-cameras">
           <a href="#">
             <h3>Экшн-камеры</h3>
           </a>
         </li>
-        <li class="catalog-item">
+        <li class="catalog-item catalog-fitnes">
           <a href="#">
             <h3>Фитнес-браслеты</h3>
           </a>
         </li>
-        <li class="catalog-item">
+        <li class="catalog-item catalog-clock">
           <a href="#">
             <h3>Умные часы</h3>
           </a>
         </li>
-        <li class="catalog-item">
+        <li class="catalog-item catalog-quadrocopter">
           <a href="#">
             <h3>Квадрокоптеры</h3>
           </a>
@@ -245,14 +245,16 @@
         <section class="contacts">
           <h2 class="title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <img src="img/map.png" width="560" height="222" alt="Улица строителе, 15">
+          <a href="https://goo.gl/maps/8UvwN5Me4CF2">
+            <img src="img/map.png" width="560" height="222" alt="Улица строителе, 15">
+          </a>
           <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.6812077155096!2d37.528143189451605!3d55.68757513420582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522401326164" width="960" height="560" style="border:0" allowfullscreen></iframe>
             <button class="close-button close-button-map" type="button">
               <span class="visually-hidden">Закрыть</span>
             </button>
           </div>
-          <button class="button write-us-button">Напишите нам</button>
+          <a class="button write-us-button" href="writeus.html">Напишите нам</a>
           <section class="write-us">
             <h2 class="visually-hidden">Окно отправки письма</h2>
             <button class="close-button close-button-popup" type="button">
@@ -281,13 +283,13 @@
       <div class="container">
         <div class="main-footer-content">
           <div class="footer-top">
-            <a class="footer-logo">Device</a>
+            <a class="footer-logo index-logo">Device</a>
             <ul class="footer-user-navigation">
               <li class="footer-user-navigation-item user-enter-yellow user-enter-index">
                 <a href="#">Войти</a>
               </li>
               <li class="footer-user-navigation-item compare-yellow">
-                <a href="#">Сравить</a>
+                <a href="#">Сравнить</a>
               </li>
               <li class="footer-user-navigation-item cart-yellow">
                 <a href="#">Корзина</a>
@@ -311,17 +313,17 @@
           </div>
           <div class="footer-bottom">
             <ul class="footer-social">
-              <li class="footer-social-item">
+              <li class="footer-social-item facebook">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Фейсбук</span>
                 </a>
               </li>
-              <li class="footer-social-item">
+              <li class="footer-social-item instagram">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
-              <li class="footer-social-item">
+              <li class="footer-social-item twitter">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Твиттер</span>
                 </a>
