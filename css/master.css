@@ -1851,13 +1851,12 @@ input[type="radio"]:checked ~ label::before {
   list-style: none;
 }
 .sorting-list {
-  width: 290px;
+  width: 520px;
   margin-top: 18px;
-  margin-right: 228px;
   margin-bottom: 5px;
 }
 .sorting-list-button {
-  width: 42px;
+  min-width: 42px;
   margin-top: 18px;
 }
 .sorting-item a,
