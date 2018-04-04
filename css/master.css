@@ -206,8 +206,7 @@ a:active:not(.button) {
   display: none;
   width: 85px;
   height: 50px;
-  border-width: 2px;
-  border-color: #000000;
+  border: 2px solid #000000;
   margin-left:auto;
   background-color: transparent;
 }
@@ -1187,10 +1186,6 @@ input[type="search"]:focus ~ label {
   letter-spacing: normal;
   width: 360px;
 }
-.letter:last-of-type label,
-.letter:last-of-type .field {
-  width: 760px;
-}
 .letter .field {
   font-size: 14px;
   font-weight: 400;
@@ -1198,9 +1193,13 @@ input[type="search"]:focus ~ label {
   letter-spacing: normal;
   border: 0;
   background-color: rgba(230, 230, 230, 0.5);
-  width: 360px;
-  padding: 16px 0 16px 20px;
+  width: 320px;
+  padding: 16px 20px;
   margin-top: 5px;
+}
+.letter:last-of-type label,
+.letter:last-of-type .field {
+  width: 720px;
 }
 .letter .field::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
@@ -1226,12 +1225,13 @@ input[type="search"]:focus ~ label {
   background-color: rgba(230, 230, 230, 0.8);
 }
 .letter:not(:last-of-type) .field:focus {
-  width: 754px;
+  width: 314px;
   height: 12px;
   border: 3px solid #f7e296;
   background-color: #ffffff;
 }
 .letter:last-of-type .field:focus {
+  width: 714px;
   border: 3px solid #f7e296;
   background-color: #ffffff;
   color: #000000;
@@ -1781,7 +1781,7 @@ input[type="radio"]:disabled ~ label {
   opacity: 0.25;
 }
 input[type="radio"]:checked ~ label::before {
-  top: -4px;
+  top: -3px;
   background-image: url(../img/radio-on.svg);
 }
 .filter-form .button {
