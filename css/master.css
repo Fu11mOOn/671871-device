@@ -168,6 +168,10 @@ a:active:not(.button) {
 }
 .header-logo {
   position: absolute;
+  top: -22px;
+  left: 57px;
+}
+.index-logo {
   top: -24px;
   left: 58px;
 }
@@ -877,13 +881,13 @@ input[type="search"]:focus ~ label {
 .logotypes-list .dji {
   width: 215px;
   height: 79px;
-  padding-left: 55px;
+  padding-left: 54px;
   padding-top: 1px;
 }
 .logotypes-list .spg {
   width: 269px;
   height: 67px;
-  padding-left: 0px;
+  padding-left: 1px;
   padding-top: 13px;
 }
 .logotypes-list .gp {
@@ -1325,12 +1329,12 @@ input[type="search"]:focus ~ label {
   margin-left: 176px;
 }
 .footer-user-navigation .cart-inner {
-  margin-left: 32px;
+  margin-left: 33px;
 }
 .footer-user-navigation .user-out-footer {
   padding-left: 0px;
-  margin-left: 14px;
-  margin-right: 19px;
+  margin-left: 15px;
+  margin-right: 18px;
 }
 .user-out-footer a {
   color: rgba(255, 255, 255, 0.3);
@@ -1346,7 +1350,7 @@ input[type="search"]:focus ~ label {
   content: "";
   position: absolute;
   left: -26px;
-  top: 5px;
+  top: 4px;
   width: 13px;
   height: 12px;
   background-image: url(../img/user-yellow.svg);
@@ -1358,7 +1362,7 @@ input[type="search"]:focus ~ label {
   position: absolute;
   top: 10px;
   left: -20px;
-  top: 5px;
+  top: 6px;
   width: 10px;
   height: 10px;
   background-image: url(../img/compare-yellow.svg);
@@ -1370,7 +1374,7 @@ input[type="search"]:focus ~ label {
   position: absolute;
   top: 2px;
   left: -22px;
-  top: 5px;
+  top: 4px;
   width: 12px;
   height: 12px;
   background-image: url(../img/cart-yellow.svg);
@@ -1445,7 +1449,6 @@ input[type="search"]:focus ~ label {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 55px;
-
 }
 .footer-bottom::before {
   content: "";
@@ -1483,7 +1486,7 @@ input[type="search"]:focus ~ label {
   margin-left: 23px;
 }
 .twitter {
-  margin-left: 23px;
+  margin-left: 22px;
 }
 .footer-social-item a:hover {
   opacity: 0.6;
@@ -1510,9 +1513,9 @@ input[type="search"]:focus ~ label {
   display: inline-block;
   vertical-align: middle;
   width: 27px;
-  height: 34px;
+  height: 35px;
   background-image: url("../img/logo-html.svg");
-  background-size: 27px 34px;
+  background-size: 27px 35px;
   background-repeat: no-repeat;
   margin-left: 460px;
   margin-top: 3px;
@@ -1570,7 +1573,7 @@ input[type="search"]:focus ~ label {
   background-position: 68px 9px;
 }
 .breadcrumbs-item:nth-child(2) a {
-  background-position: 128px 9px;
+  background-position: 129px 9px;
 }
 .breadcrumbs a:hover {
   color: rgba(0, 0, 0, 0.6);
@@ -1622,6 +1625,7 @@ input[type="search"]:focus ~ label {
   margin: 0;
   padding: 0;
   height: 70px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 3.2px;
   margin-left: 60px;
@@ -1704,7 +1708,7 @@ input[type="search"]:focus ~ label {
   cursor: pointer;
 }
 .product-price .point:first-of-type::before {
-  top: -23px;
+  top: -22px;
   left: -6px;
 }
 .product-price .point:last-of-type::before {
@@ -1749,11 +1753,18 @@ input[type="search"]:focus ~ label {
   background-repeat: no-repeat;
   background-size: 23px 23px;
 }
+.product-color .red-color-label::before {
+  top: -3px;
+}
+.product-color .pink-color-label::before {
+  top: -3px;
+  left: -1px;
+}
 .bluetooth label::before{
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  top: -3px;
+  top: -4px;
   left: -2px;
   content: "";
   width: 25px;
@@ -1762,13 +1773,20 @@ input[type="search"]:focus ~ label {
   background-repeat: no-repeat;
   background-size: 25px 25px;
 }
+.bluetooth .bluetooth-no-label::before {
+  top: -3px;
+}
 input[type="checkbox"]:checked ~ label::before {
-  top: -4px;
+  top: -2px;
   width: 27px;
-  height: 28px;
+  height: 23px;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
-  background-size: 27px 27px;
+  background-size: 27px 23px;
+}
+input[type="checkbox"]:checked ~ .red-color-label::before,
+input[type="checkbox"]:checked ~ .pink-color-label::before {
+  top: -3px;
 }
 input[type="checkbox"]:checked:not(:disabled) ~ label:hover::before,
 input[type="checkbox"]:not(:checked):not(:disabled) ~ label:hover::before,
@@ -1781,8 +1799,11 @@ input[type="radio"]:disabled ~ label {
   opacity: 0.25;
 }
 input[type="radio"]:checked ~ label::before {
-  top: -3px;
+  top: -4px;
   background-image: url(../img/radio-on.svg);
+}
+input[type="radio"]:checked ~ .bluetooth-no-label::before {
+  top: -3px;
 }
 .filter-form .button {
   width: 200px;
@@ -1854,6 +1875,7 @@ input[type="radio"]:checked ~ label::before {
   width: 42px;
   margin-top: 18px;
   margin-left: 170px;
+  margin-right: -1px;
 }
 .sorting-item a,
 .sorting-item-button a {
@@ -1891,7 +1913,6 @@ input[type="radio"]:checked ~ label::before {
   background-repeat: no-repeat;
   background-size: 11px 10px;
   margin-left: 19px;
-  margin-right: -1px;
 }
 .sorting-item a:hover,
 .sorting-item-button a:hover {
